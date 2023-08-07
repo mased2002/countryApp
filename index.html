@@ -6,14 +6,18 @@
 
   <title>Countries app</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a4561492b8.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="body">
+  <section class="first">
  <div class="header">
     <h3>where in the world?</h3>
-    <h4><a href="url">dark mode</a></h4>
+    <h4><button class="dark"><i class="fa-solid fa-moon fa-spin"></i>&nbsp; dark mode</button></h4>
   </div>
+  <hr>
+</section>
   <div class="search-cont">
-      <input type="text" id="locationInput" placeholder="Enter name of country">
+    <input type="text" id="locationInput" placeholder="Enter name of country...">
 
 <select name="regions" id="regions">
 <option value="" disabled selected hidden>filter by region</option>
@@ -23,12 +27,12 @@
   <option value="south america">South america</option>
   <option value="asia">Asia</option>
   <option value="oceania">Oceania</option>
-</selectBOB> 
-  </dAOAiv>
-  
+</select> 
+  </div>
+
   <div class="display-cont">
   </div>
-  OOA
+  
   
 
   <script src="script.js"></script>
