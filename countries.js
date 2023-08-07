@@ -14,12 +14,19 @@ const second = document.querySelector('.second')
 const backBtn = document.querySelector('.back-btn')
 
 darkbtn.addEventListener("click", ()=>{
-  wholeBody.classList.add('darkened')
-  first.classList.add('darkened')
-  second.classList.add('darkened')
-  darkbtn.classList.add('darkenedBtn')
-  backBtn.classList.add('darkenedBtn')
-
+  if(darkbtn.classList.contains('darkenedBtn')){
+  wholeBody.classList.remove('darkened')
+  first.classList.remove('darkened')
+  second.classList.remove('darkened')
+  darkbtn.classList.remove('darkenedBtn')
+  backBtn.classList.remove('darkenedBtn')
+  }else{
+    wholeBody.classList.add('darkened')
+    first.classList.add('darkened')
+    second.classList.add('darkened')
+    darkbtn.classList.add('darkenedBtn')
+    backBtn.classList.add('darkenedBtn')
+  }
  })
 
 getDetails()

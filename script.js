@@ -14,10 +14,19 @@ const second = document.querySelector('.second')
 const wholeBody = document.querySelector('.body')
 
 darkbtn.addEventListener("click", ()=>{
- darkbtn.classList.add('darkenedBtn')
-  first.classList.add('darkened')
- wholeBody.classList.add('darkened')
- countryContainer.classList.add('darkened')
+  if(darkbtn.classList.contains('darkenedBtn')){
+ darkbtn.classList.remove('darkenedBtn')
+  first.classList.remove('darkened')
+ wholeBody.classList.remove('darkened')
+ countryContainer.classList.remove('darkened')
+ hrdivider.classList.remove('darkened')
+  }else{
+    darkbtn.classList.add('darkenedBtn')
+    first.classList.add('darkened')
+    wholeBody.classList.add('darkened')
+    countryContainer.classList.add('darkened')
+    hrdivider.classList.add('darkened')
+  }
 })
 
 search.addEventListener('keyup', ()=>{
