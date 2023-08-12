@@ -160,7 +160,16 @@ function home_page() {
 }
 
 function searchCountry(){
-  
+  if( searchedCountry == "" ){
+    home_page()
+  .then(() => {
+    delete_this();
+    display_countries();
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+  }else{
   return new Promise((resolve, reject) => {
     fetch(apiUrl + `name/${searchedCountry}`)
     .then(result => result.json())
@@ -173,6 +182,7 @@ function searchCountry(){
          reject(error);
        });
   });
+  }
 
 }
 
